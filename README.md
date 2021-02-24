@@ -35,7 +35,7 @@ kubectl apply -f ingress/tomcat-ingress.yaml
 #### Deploy Https Ingress
 
 ```bash
-# create self certifate
+# create self certificate
 openssl genrsa -out tls.key 2048
 openssl req -new -x509 -key tls.key -out tls.crt -subj /C=CN/ST=GuangDong/L=GuangZhou/O=DevOps/CN=tomcat.linux.io -days 3650
 # create k8s secret
