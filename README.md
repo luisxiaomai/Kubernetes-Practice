@@ -17,24 +17,24 @@
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-flow.png)
 
 #### Deploy Ingress Controller
-```yaml	
+```bash	
 kubectl apply -f ingress/ingress-nginx-deploy.yaml
 ```
 
 #### Deploy Tomcat Deployment and Service
-```yaml	
+```bash	
 kubectl apply -f ingress/tomcat-deployment-service.yaml
 ```
 
-#### Deploy Ingress
-```yaml	
+#### Deploy Http Ingress
+```bash	
 kubectl apply -f ingress/tomcat-ingress.yaml
 ```
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-http.png)
 
 #### Deploy Https Ingress
 
-```yaml
+```bash
 # create self certifate
 openssl genrsa -out tls.key 2048
 openssl req -new -x509 -key tls.key -out tls.crt -subj /C=CN/ST=GuangDong/L=GuangZhou/O=DevOps/CN=tomcat.linux.io -days 3650
