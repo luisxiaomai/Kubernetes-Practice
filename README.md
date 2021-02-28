@@ -7,7 +7,7 @@
   - [Pod](#Pod)
   - [Service](#Service)
   - [Ingress](#Ingress)
-  - [Volume](#Volume)
+  - [Volume-PV,PVC](#Volume-PV,PVC)
   - [ConfigMap](#ConfigMap)
   - [Secret](#Secret)
   - ...
