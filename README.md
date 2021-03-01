@@ -51,6 +51,7 @@ kubectl apply -f ingress/tomcat-ingress-tls.yaml
   
 ## Volume-PV,PVC
 #### Static
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/static-volume.png)
 
 #### Dynamic
   
