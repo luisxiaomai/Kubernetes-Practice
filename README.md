@@ -60,8 +60,10 @@ echo 'Hello from Kubernetes storage' > /mnt/data/index.html
 kubectl create -f volume/pv.yaml
 # create pvc
 kubectl create -f volume/pvc.yaml
-# create test pod
+# create nginx pod for test
 kubectl create -f volume/pvc-pod-test.yaml
-
+# entry the nginx pod and verify that nginx is serving the index.html file from the hostPath volume
+root@task-pv-pod:/# curl localhost
+Hello from Kubernetes storage
 #### Dynamic
   
