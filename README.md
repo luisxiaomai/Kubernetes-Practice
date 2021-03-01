@@ -49,7 +49,7 @@ kubectl apply -f ingress/tomcat-ingress-tls.yaml
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-https.png)
 
   
-## Volume-PV&PVC
+## Volume-PV,PVC
 #### Static
 
 #### Dynamic
