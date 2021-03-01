@@ -62,8 +62,9 @@ kubectl create -f volume/pv.yaml
 kubectl create -f volume/pvc.yaml
 # create nginx pod for test
 kubectl create -f volume/pvc-pod-test.yaml
-# entry the nginx pod and verify that nginx is serving the index.html file from the hostPath volume
-root@task-pv-pod:/# curl localhost
+# entry the nginx pod 
+curl http://localhost/
+# verify that nginx is serving the index.html file from the hostPath volume
 Hello from Kubernetes storage
 ```
 #### Dynamic
