@@ -6,8 +6,8 @@
 
   - [Pod](#Pod)
   - [Service](#Service)
-  - [Ingress](#Ingress1)
-  - [Volume-PV,PVC](#Volume-PV,PVC)
+  - [Ingress](#Ingress)
+  - [Volume-PV&PVC](#Volume-PV&PVC)
   - [ConfigMap](#ConfigMap)
   - [Secret](#Secret)
   - ...
@@ -16,7 +16,7 @@
 
 ## Service
 
-## Ingress1
+## Ingress
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-flow.png)
 
 #### Deploy Ingress Controller
@@ -49,7 +49,7 @@ kubectl apply -f ingress/tomcat-ingress-tls.yaml
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-https.png)
 
   
-## Volume-PV,PVC
+## Volume-PV&PVC
 #### Static
 
 #### Dynamic
