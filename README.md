@@ -6,7 +6,7 @@
 
   - [Pod](#Pod)
   - [Service](#Service)
-  - [Ingress](#Ingress)
+  - [Ingress](#Ingress1)
   - [Volume-PV,PVC](#Volume-PV,PVC)
   - [ConfigMap](#ConfigMap)
   - [Secret](#Secret)
@@ -16,7 +16,7 @@
 
 ## Service
 
-## Ingress
+## Ingress1
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-flow.png)
 
 #### Deploy Ingress Controller
