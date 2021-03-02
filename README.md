@@ -54,7 +54,7 @@ kubectl create -f ingress/tomcat-ingress-tls.yaml
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/static-volume.png)
 
 ```bash
-# create /mnt/data/index.hml in node
+# create /mnt/data/index.hml in one node
 echo 'Hello from Kubernetes storage' > /mnt/data/index.html
 # create pv
 kubectl create -f volume/pv.yaml
