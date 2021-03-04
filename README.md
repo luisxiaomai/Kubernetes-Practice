@@ -68,4 +68,15 @@ curl http://localhost/
 Hello from Kubernetes storage
 ```
 #### Dynamic
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/dynamic-volume.png)
+
+Suppose provisioner services existed and related client pod provisioner has been created in k8s cluster
+```bash
+# Create Storage Class.
+kubectl create -f volume/portworx-sc.yaml
+# create pvc
+kubectl create -f volume/portworx-volume-pvcsc.yaml
+# create Create Pod which uses Persistent Volume Claim with storage class.
+kubectl create -f volume/portworx-volume-pvcscpod.yaml
+```
   
