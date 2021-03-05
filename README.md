@@ -80,3 +80,6 @@ kubectl create -f volume/portworx-volume-pvcsc.yaml
 kubectl create -f volume/portworx-volume-pvcscpod.yaml
 ```
   
+## ConfigMap
+#### Env Variable
+#### Volume
