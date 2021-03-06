@@ -19,23 +19,23 @@
 ## Ingress
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-flow.png)
 
-#### Deploy Ingress Controller
+### Deploy Ingress Controller
 ```bash	
 kubectl create -f ingress/ingress-nginx-deploy.yaml
 ```
 
-#### Deploy Tomcat Deployment and Service
+### Deploy Tomcat Deployment and Service
 ```bash	
 kubectl create -f ingress/tomcat-deployment-service.yaml
 ```
 
-#### Deploy Http Ingress
+### Deploy Http Ingress
 ```bash	
 kubectl create -f ingress/tomcat-ingress.yaml
 ```
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-http.png)
 
-#### Deploy Https Ingress
+### Deploy Https Ingress
 
 ```bash
 # create self certificate
@@ -50,7 +50,7 @@ kubectl create -f ingress/tomcat-ingress-tls.yaml
 
   
 ## Volume-PV,PVC
-#### Static
+### Static
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/static-volume.png)
 
 ```bash
@@ -67,7 +67,7 @@ curl http://localhost/
 # verify that nginx is serving the index.html file from the hostPath volume
 Hello from Kubernetes storage
 ```
-#### Dynamic
+### Dynamic
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/dynamic-volume.png)
 
 Suppose provisioner services existed and related client pod provisioner has been created in k8s cluster
@@ -81,5 +81,5 @@ kubectl create -f volume/portworx-volume-pvcscpod.yaml
 ```
   
 ## ConfigMap
-#### Env Variable
-#### Volume
+### Env Variable
+### Volume
