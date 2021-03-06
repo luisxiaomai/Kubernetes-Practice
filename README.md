@@ -21,17 +21,17 @@
 
 ### Deploy Ingress Controller
 ```bash	
-kubectl create -f ingress/ingress-nginx-deploy.yaml
+kubectl create -f Ingress/ingress-nginx-deploy.yaml
 ```
 
 ### Deploy Tomcat Deployment and Service
 ```bash	
-kubectl create -f ingress/tomcat-deployment-service.yaml
+kubectl create -f Ingress/tomcat-deployment-service.yaml
 ```
 
 ### Deploy Http Ingress
 ```bash	
-kubectl create -f ingress/tomcat-ingress.yaml
+kubectl create -f Ingress/tomcat-ingress.yaml
 ```
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-http.png)
 
@@ -44,7 +44,7 @@ openssl req -new -x509 -key tls.key -out tls.crt -subj /C=CN/ST=GuangDong/L=Guan
 # create k8s secret
 kubectl create secret tls tomcat-ingress-secret --cert=tls.crt --key=tls.key -n testing
 # create https Ingress
-kubectl create -f ingress/tomcat-ingress-tls.yaml
+kubectl create -f Ingress/tomcat-ingress-tls.yaml
 ```     
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/ingress-https.png)
 
@@ -57,11 +57,11 @@ kubectl create -f ingress/tomcat-ingress-tls.yaml
 # create /mnt/data/index.hml in one node
 echo 'Hello from Kubernetes storage' > /mnt/data/index.html
 # create pv
-kubectl create -f volume/pv.yaml
+kubectl create -f Volume/pv.yaml
 # create pvc
-kubectl create -f volume/pvc.yaml
+kubectl create -f Volume/pvc.yaml
 # create nginx pod for test
-kubectl create -f volume/pvc-pod-test.yaml
+kubectl create -f Volume/pvc-pod-test.yaml
 # entry the nginx pod 
 curl http://localhost/
 # verify that nginx is serving the index.html file from the hostPath volume
@@ -73,13 +73,19 @@ Hello from Kubernetes storage
 *Suppose provisioner services existed and related client pod provisioner has been created in k8s cluster*
 ```bash
 # Create Storage Class.
-kubectl create -f volume/portworx-sc.yaml
+kubectl create -f Volume/portworx-sc.yaml
 # create pvc
-kubectl create -f volume/portworx-volume-pvcsc.yaml
+kubectl create -f Volume/portworx-volume-pvcsc.yaml
 # create Create Pod which uses Persistent Volume Claim with storage class.
-kubectl create -f volume/portworx-volume-pvcscpod.yaml
+kubectl create -f Volume/portworx-volume-pvcscpod.yaml
 ```
   
 ## ConfigMap
 ### Environment Variables
+```bash
+# Create ConfigMaps.
+kubectl create -f ConfigMap/configmap-env.yaml
+# Create test pod
+kubectl create -f ConfigMap/configmap-env-pod.yaml.yaml
+
 ### Configuration Files in a Volume
