@@ -85,7 +85,7 @@ kubectl create -f Volume/portworx-volume-pvcscpod.yaml
 
 ### Environment Variables
 ```bash
-# create ConfigMaps.
+# create ConfigMap
 kubectl create -f ConfigMap/configmap-env.yaml
 # create test pod
 kubectl create -f ConfigMap/configmap-env-pod.yaml
@@ -98,7 +98,7 @@ SPECIAL_HOW_KEY=very
 
 ### Configuration Files in a Volume
 ```bash
-# create ConfigMap.
+# create ConfigMap
 kubectl create -f ConfigMap/configmap-volume.yaml
 # create test pod
 kubectl create -f ConfigMap/configmap-volume-pod.yaml
