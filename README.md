@@ -81,13 +81,15 @@ kubectl create -f Volume/portworx-volume-pvcscpod.yaml
 ```
   
 ## ConfigMap
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap.png)
+
 ### Environment Variables
 ```bash
 # create ConfigMaps.
 kubectl create -f ConfigMap/configmap-env.yaml
 # create test pod
-kubectl create -f ConfigMap/configmap-env-pod.yaml.yaml
-# check env in pod container
+kubectl create -f ConfigMap/configmap-env-pod.yaml
+# execute check env variables command in pod contianer
 kubectl exec -it configmap-pod bash -- env | grep "log_level\|SPECIAL_HOW_KEY"
 # verify that env variables from configmap injected in pod container
 log_level=INFO
@@ -95,3 +97,13 @@ SPECIAL_HOW_KEY=very
 ```
 
 ### Configuration Files in a Volume
+```bash
+# create ConfigMap.
+kubectl create -f ConfigMap/configmap-volume.yaml
+# create test pod
+kubectl create -f ConfigMap/configmap-volume-pod.yaml
+# execute check config files command in pod contianer
+kubectl exec -it configmap-volume bash -- ls /etc/config
+# verify configs files which defined in configmap keys exist in /etc/config directory
+special.how  special.when
+```
