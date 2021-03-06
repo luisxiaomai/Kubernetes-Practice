@@ -72,7 +72,7 @@ Hello from Kubernetes storage
 
 *Suppose provisioner services existed and related client pod provisioner has been created in k8s cluster*
 ```bash
-# Create Storage Class.
+# create Storage Class.
 kubectl create -f Volume/portworx-sc.yaml
 # create pvc
 kubectl create -f Volume/portworx-volume-pvcsc.yaml
@@ -83,9 +83,15 @@ kubectl create -f Volume/portworx-volume-pvcscpod.yaml
 ## ConfigMap
 ### Environment Variables
 ```bash
-# Create ConfigMaps.
+# create ConfigMaps.
 kubectl create -f ConfigMap/configmap-env.yaml
-# Create test pod
+# create test pod
 kubectl create -f ConfigMap/configmap-env-pod.yaml.yaml
+# check env in pod container
+kubectl exec -it configmap-pod bash -- env | grep "log_level\|SPECIAL_HOW_KEY"
+# verify that env variables from configmap injected in pod container
+log_level=INFO
+SPECIAL_HOW_KEY=very
+```
 
 ### Configuration Files in a Volume
