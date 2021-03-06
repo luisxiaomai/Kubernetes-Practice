@@ -81,5 +81,5 @@ kubectl create -f volume/portworx-volume-pvcscpod.yaml
 ```
   
 ## ConfigMap
-### Consume ConfigMap as environment variables
-### Consume ConfigMap as as configuration files in a volume
+### Environment Variables
+### Configuration Files in a Volume
