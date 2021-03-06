@@ -50,7 +50,7 @@ kubectl create -f ingress/tomcat-ingress-tls.yaml
 
   
 ## Volume-PV,PVC
-### Static
+### Static Provisioning
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/static-volume.png)
 
 ```bash
@@ -67,10 +67,10 @@ curl http://localhost/
 # verify that nginx is serving the index.html file from the hostPath volume
 Hello from Kubernetes storage
 ```
-### Dynamic
+### Dynamic Provisioning
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/dynamic-volume.png)
 
-Suppose provisioner services existed and related client pod provisioner has been created in k8s cluster
+*Suppose provisioner services existed and related client pod provisioner has been created in k8s cluster*
 ```bash
 # Create Storage Class.
 kubectl create -f volume/portworx-sc.yaml
