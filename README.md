@@ -120,11 +120,11 @@ YWRtaW4=
 > echo -n '123' | base64
 MTIz
 # create secret
-kubectl create -f Secret/secret-env.yaml
+> kubectl create -f Secret/secret-env.yaml
 # create test pod
-kubectl create -f Secret/secret-env-pod.yaml
+> kubectl create -f Secret/secret-env-pod.yaml
 # execute and check secrets existed in env variables of test pod container
 > kubectl exec -it configmap-volume bash -- env
-password=123
-username=admin
+  password=123
+  username=admin
 ```
