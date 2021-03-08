@@ -90,7 +90,7 @@ kubectl create -f ConfigMap/configmap-env.yaml
 # create test pod
 kubectl create -f ConfigMap/configmap-env-pod.yaml
 # execute check env variables command in pod contianer
-kubectl exec -it configmap-pod bash -- env | grep "log_level\|SPECIAL_HOW_KEY"
+kubectl exec -it configmap-env bash -- env | grep "log_level\|SPECIAL_HOW_KEY"
 # verify that env variables from configmap injected in pod container
 log_level=INFO
 SPECIAL_HOW_KEY=very
