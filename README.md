@@ -110,6 +110,7 @@
 
 Secret is similar to config maps, secrets can be mounted into a pod as a volume to expose needed information or can be injected as environment variables.
 
+### Environment Variables
 ```bash
 # convert the "admin/123" to base64 as follows 
 > echo -n 'admin' | base64
