@@ -109,7 +109,7 @@
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap-secret.png)
 
 Secret is similar to config maps, secrets can be mounted into a pod as a volume to expose needed information or can be injected as environment variables.
-For example, to store two strings in a Secret using the data field, convert the strings to base64 as follows
+
 ```bash
 # convert the "admin/123" to base64 as follows 
 > echo -n 'admin' | base64
