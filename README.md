@@ -8,7 +8,8 @@
   - [Service](#Service)
   - [Ingress](#Ingress)
   - [Volume-PV,PVC](#volume-pvpvc)
-  - [ConfigMap&Secret](#ConfigMap&Secret)
+  - [ConfigMap](#ConfigMap)
+  - [Secret](#Secret)
   - ...
   
 ## Pod
@@ -79,8 +80,8 @@ kubectl create -f Volume/portworx-volume-pvcsc.yaml
 kubectl create -f Volume/portworx-volume-pvcscpod.yaml
 ```
   
-## ConfigMap&Secret
-![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap-secret.png)
+## ConfigMap
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap.png)
 
 ### Environment Variables
 ```bash
@@ -106,3 +107,7 @@ kubectl exec -it configmap-volume bash -- ls /etc/config
 # verify configs files which defined in configmap keys exist in /etc/config directory
 special.how  special.when
 ```
+
+## Secret
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap-secret.png)
+
