@@ -113,9 +113,9 @@ For example, to store two strings in a Secret using the data field, convert the 
 ```bash
 # convert the "admin/123" to base64 as follows 
 > echo -n 'admin' | base64
-YWRtaW4=
+  YWRtaW4=
 > echo -n '123' | base64
-MTIz
+  MTIz
 # create secret
 > kubectl create -f Secret/secret-env.yaml
 # create test pod
