@@ -112,3 +112,19 @@ special.how  special.when
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap-secret.png)
 
 Secret is similar to config maps, secrets can be mounted into a pod as a volume to expose needed information or can be injected as environment variables.
+For example, to store two strings in a Secret using the data field, convert the strings to base64 as follows
+```bash
+# convert the "admin/123" to base64 as follows 
+> echo -n 'admin' | base64
+YWRtaW4=
+> echo -n '123' | base64
+MTIz
+# create secret
+kubectl create -f Secret/secret-env.yaml
+# create test pod
+kubectl create -f Secret/secret-env-pod.yaml
+# execute and check secrets existed in env variables of test pod container
+> kubectl exec -it configmap-volume bash -- env
+password=123
+username=admin
+```
