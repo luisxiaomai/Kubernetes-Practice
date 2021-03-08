@@ -110,4 +110,5 @@ special.how  special.when
 
 ## Secret
 ![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap-secret.png)
+
 Secret is similar to config maps, secrets can be mounted into a pod as a volume to expose needed information or can be injected as environment variables.
