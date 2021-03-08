@@ -8,8 +8,7 @@
   - [Service](#Service)
   - [Ingress](#Ingress)
   - [Volume-PV,PVC](#volume-pvpvc)
-  - [ConfigMap](#ConfigMap)
-  - [Secret](#Secret)
+  - [ConfigMap&Secret](#ConfigMap&Secret)
   - ...
   
 ## Pod
@@ -80,8 +79,8 @@ kubectl create -f Volume/portworx-volume-pvcsc.yaml
 kubectl create -f Volume/portworx-volume-pvcscpod.yaml
 ```
   
-## ConfigMap
-![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap.png)
+## ConfigMap&Secret
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/configmap-secret.png)
 
 ### Environment Variables
 ```bash
