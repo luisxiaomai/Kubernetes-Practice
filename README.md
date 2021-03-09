@@ -2,6 +2,8 @@
 
 🎉🎉🎉  Kubernetes Study and Practice 🎉🎉🎉 
 
+![alt text](https://github.com/luisxiaomai/Images/blob/master/Kubernetes-Practice/k8s-mini-workflow.png)
+
 ## Table of Contents
 
   - [Pod](#Pod)
