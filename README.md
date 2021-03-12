@@ -44,7 +44,7 @@
 > openssl genrsa -out tls.key 2048
 > openssl req -new -x509 -key tls.key -out tls.crt -subj /C=CN/ST=GuangDong/L=GuangZhou/O=DevOps/CN=tomcat.linux.io -days 3650
 # create k8s secret
-> kubectl create secret tls tomcat-ingress-secret --cert=tls.crt --key=tls.key -n testing
+> kubectl create secret tls tomcat-ingress-secret --cert=tls.crt --key=tls.key
 # create https Ingress
 > kubectl create -f Ingress/tomcat-ingress-tls.yaml
 ```     
